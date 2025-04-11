@@ -1,0 +1,52 @@
+[
+	{
+		"question": "¿Qué equipo tiene más Champions League?",
+		"answers": [
+			"Real Madrid",
+			"FC Barcelona",
+			"AC Milan",
+			"Nottingham Forest"
+		],
+		"correctAnswer": "Real Madrid"
+	},
+	{
+		"question": "¿Qué equipo juega sus partidos en Old Trafford?",
+		"answers": [
+			"Tottenham Hotspur",
+			"Manchester City",
+			"Manchester United",
+			"Brighton & Hove Albion"
+		],
+		"correctAnswer": "Manchester United"
+	},
+	{
+		"question": "Si hablamos de Balones de Oro, Cristiano Ronaldo tiene...",
+		"answers": [
+			"5",
+			"6",
+			"4",
+			"7"
+		],
+		"correctAnswer": "5"
+	},
+	{
+		"question": "¿Cuál fue el equipo con el que Xabi Alonso ganó la Bundesliga como entrenador?",
+		"answers": [
+			"Borusia Dortmund",
+			"Bayern Munich",
+			"FC Schalke 04",
+			"Bayer Leverkusen"
+		],
+		"correctAnswer": "Bayer Leverkusen"
+	},
+	{
+		"question": "¿Como se apodan los aficionados del FC Barcelona?",
+		"answers": [
+			"Culés",
+			"Madridistas",
+			"Atléticos",
+			"Indálicos"
+		],
+		"correctAnswer": "Culés"
+	}
+]
