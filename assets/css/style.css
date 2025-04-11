@@ -3,18 +3,18 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
 	font-family: Arial, sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	background-color: #f4f4f4;
-  }
-  
-  #quiz__container {
+}
+
+#quiz__container {
 	background-color: #fff;
 	padding: 20px;
 	border-radius: 8px;
@@ -22,48 +22,68 @@
 	width: 100%;
 	max-width: 600px;
 	text-align: center;
-  }
-  
-  .quiz__title {
+}
+
+.quiz__title {
 	font-size: 2rem;
 	margin-bottom: 20px;
 	color: #333;
-  }
-  
-  .quiz__question {
+}
+
+.quiz__question {
 	font-size: 1.2rem;
 	margin-bottom: 20px;
-  }
-  
-  .quiz__options {
+}
+
+.quiz__options {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 10px;
-  }
-  
-  .quiz__option {
+}
+
+.quiz__option {
 	background-color: #007bff;
+	/* Color original */
 	color: #fff;
-	padding: 10px;
 	font-size: 1rem;
+	padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	transition: background-color 0.3s;
-  }
-  
-  .quiz__option:hover {
+	margin: 5px;
+}
+
+.quiz__option:hover {
 	background-color: #0056b3;
-  }
-  
-  /* Puntaje */
-  #score {
+}
+
+/* Puntaje */
+#score {
 	font-size: 1.5rem;
 	font-weight: bold;
 	margin-top: 20px;
-  }
+}
 
-  /* Estilo del botón de reiniciar */
+/* Estilo del contenedor del resultado final */
+.result__container {
+	text-align: center;
+	padding: 20px;
+	background-color: #f8f9fa;
+	border-radius: 10px;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+}
+
+.result__container h2 {
+	font-size: 2rem;
+	color: #28a745;
+}
+
+.result__container p {
+	font-size: 1.2rem;
+}
+
+/* Estilo del botón de reiniciar */
 .quiz__restart {
 	background-color: #28a745;
 	color: #fff;
@@ -73,107 +93,105 @@
 	border-radius: 5px;
 	cursor: pointer;
 	margin-top: 20px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-  }
-  
-  .quiz__restart:hover {
+}
+
+.quiz__restart:hover {
 	background-color: #218838;
-  }
-  
-  
-  /* Media Queries para hacerlo responsive */
-  
-  /* Pantallas pequeñas (móviles) */
-  @media (max-width: 540px) {
+}
+
+
+/* Media Queries para hacerlo responsive */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 540px) {
 	#quiz__container {
 		width: 90%;
 	}
-	
+
 	.quiz__title {
-	  font-size: 1.5rem;
+		font-size: 1.5rem;
 	}
-  
+
 	.quiz__question {
-	  font-size: 1rem;
+		font-size: 1rem;
 	}
 
 	.quiz__options {
 		margin-bottom: 1.5rem;
 	}
-  
-	.quiz__option {
-	  font-size: 0.9rem;
-	  padding: 8px;
-	}
-  }
-  
-  /* Pantallas medianas (tabletas) */
-  @media (max-width: 768px) {
-	.quiz__options {
-	  grid-template-columns: 1fr 1fr;  /* Dos botones por fila */
-	  margin-bottom: 1.5rem;
-	}
-  
-	.quiz__title {
-	  font-size: 1.8rem;
-	}
-  
-	.quiz__question {
-	  font-size: 1.4rem;
-	}
-  
-	.quiz__option {
-	  font-size: 1.2rem;
-	}
-  }
 
-  @media (max-width: 912px) {
-	.quiz__options {
-	  margin-bottom: 1.5rem;
-	}
-  
-	.quiz__title {
-	  font-size: 1.8rem;
-	}
-  
-	.quiz__question {
-	  font-size: 1.4rem;
-	}
-  
 	.quiz__option {
-	  font-size: 1.2rem;
+		font-size: 0.9rem;
+		padding: 8px;
 	}
-  }
-  
-  /* Pantallas grandes (escritorios) */
-  @media (min-width: 1024px) {
+}
+
+/* Pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+	.quiz__options {
+		grid-template-columns: 1fr 1fr;
+		/* Dos botones por fila */
+		margin-bottom: 1.5rem;
+	}
+
+	.quiz__title {
+		font-size: 1.8rem;
+	}
+
+	.quiz__question {
+		font-size: 1.4rem;
+	}
+
+	.quiz__option {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 912px) {
+	.quiz__options {
+		margin-bottom: 1.5rem;
+	}
+
+	.quiz__title {
+		font-size: 1.8rem;
+	}
+
+	.quiz__question {
+		font-size: 1.4rem;
+	}
+
+	.quiz__option {
+		font-size: 1.2rem;
+	}
+}
+
+/* Pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
 	#quiz__container {
-	  width: 80%;
-	  max-width: 800px;
+		width: 80%;
+		max-width: 800px;
 	}
 
 	.quiz__options {
-		grid-template-columns: 1fr 1fr;  /* Dos botones por fila */
+		grid-template-columns: 1fr 1fr;
+		/* Dos botones por fila */
 		margin-bottom: 1.5rem;
 	}
 
 	.quiz__title {
 		font-size: 2.3rem;
-	  }
-	
-	  .quiz__question {
-		font-size: 1.8rem;
-	  }
-	
-	  .quiz__option {
-		font-size: 1.6rem;
-	  }
+	}
 
-	  .quiz__score,
-	  #score {
+	.quiz__question {
+		font-size: 1.8rem;
+	}
+
+	.quiz__option {
+		font-size: 1.6rem;
+	}
+
+	.quiz__score,
+	#score {
 		font-size: 2rem;
-	  }
-  }
-  
+	}
+}
